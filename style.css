@@ -8,3 +8,39 @@ body {
     box-sizing: border-box;
 }
 
+.grid {
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 1000px;
+
+    font-size: 0;
+
+    background-color: rgba(119, 115, 115, .5);
+}
+
+.grid__item {
+    display: inline-block;
+    width: 380px;
+    height: 380px;
+    vertical-align: middle;
+
+    font-size: 16px;
+
+    background-color: rgba(78, 209, 61, 0.7);
+    border: solid 1px rgb(39, 151, 58);
+}
+
+.grid__item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+@media (max-width: 1240px) {
+    .grid {
+        width: 960px;
+    }
+
+    .grid__item {
+        width: 300px;
+        height: 300px;
+    }
+}
